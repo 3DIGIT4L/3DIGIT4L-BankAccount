@@ -24,16 +24,20 @@ public class BankMenu {
             System.out.println("4. exit");
             int userChoice = userInputScanner.nextInt();
             if(userChoice == 1){
+                System.out.println("How much would you like to deposit?");
                 double amount = userInputScanner.nextDouble();
                 bankService.deposit(amount);
+                System.out.println("Thank you for your deposit.");
             }else if(userChoice == 2){
+                System.out.println("How much would you like to withdraw?");
                 double amount = userInputScanner.nextDouble();
                 bankService.withdraw(amount);
+                System.out.println("Thank you for using the bank!");
             }else if(userChoice == 3){
                 double balance = bankService.getBalance();
-                System.out.println("You have: "+balance);
+                System.out.println("You have: "+ balance);
             }else if(userChoice == 4){
-                System.out.println("Thanks for visiting the bank");
+                System.out.println("Thanks for visiting the bank!");
                 banking = false;
             }
         }
